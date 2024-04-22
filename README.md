@@ -83,7 +83,9 @@ To replicate this project locally, follow these steps:
 
   ![image](https://github.com/Srikanth-343/Predictive-Analysis-on-Healthcare/assets/57741770/57b02c5e-0644-4148-a8dd-5720974cb67d)
 
+- The classification model yielded a precision of 0.74 on the test set, demonstrating its by and large prescient presentation. The disarray lattice uncovers that among the 117 examples, 75 were precisely named "1" (patients with liver illness), while 12 were accurately delegated "2" (patients without liver infection). Notwithstanding, the model battled with misleading up-sides, misclassifying 18 occurrences as "2" when they were in fact "1." The order report gives a complete evaluation, featuring lopsided characteristics in accuracy, review, and F1-score between the two classes. The model shows more grounded execution in recognizing patients with liver sickness (class "1") however displays constraints in precisely characterizing patients without liver illness (class "2").
 
+  
 ## Results and Recommendations
 
 - Feature Exploration and Selection: Research include significance, utilizing progressed methods for a more profound comprehension of factors impacting liver sickness 
