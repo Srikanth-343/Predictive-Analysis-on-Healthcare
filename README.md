@@ -7,7 +7,9 @@ This project aims to utilize predictive analytics techniques to forecast liver d
 
 ## Project Structure
 - **data**: Contains the dataset used in the project: `indian_liver_patient.csv`
-- 
+  
+  ![image](https://github.com/Srikanth-343/Predictive-Analysis-on-Healthcare/assets/57741770/d7fa7f1a-115e-470c-82c5-a96ea01f953f)
+
 - **notebooks**: Jupyter notebook for predictive analysis: `Predictive_analysis_for_Healthcare.ipynb`
 - **scripts**: Python scripts for utility functions, data preprocessing, and model training.
 - **visualizations**: Visual representations of key findings, insights, and model performance.
@@ -22,7 +24,8 @@ To replicate this project locally, follow these steps:
 - Identified potential risk factors and correlations with liver disease outcomes.
 - Visualized trends and patterns using histograms, scatter plots, and heatmaps.
 
-- <img width="466" alt="image" src="https://github.com/Srikanth-343/Predictive-Analysis-on-Healthcare/assets/57741770/1d8ebc53-d867-43ad-9c5e-400c629054ae">
+  <img width="466" alt="image" src="https://github.com/Srikanth-343/Predictive-Analysis-on-Healthcare/assets/57741770/1d8ebc53-d867-43ad-9c5e-400c629054ae">
+
 - The correlation matrix graph outwardly addresses the relationships between mathematical highlights in the liver patient dataset. Each square in the heatmap relates to the 
   relationship coefficient between two elements, with hotter varieties showing more grounded positive connections and cooler tones addressing negative connections. This 
   permits fast recognizable proof of expected examples or affiliations, directing resulting examination
@@ -34,7 +37,9 @@ To replicate this project locally, follow these steps:
 
   ### Scale the data
   scaler = StandardScaler()
+  
   X_clustering_scaled = scaler.fit_transform(X_clustering)
+  
   print(X_clustering_scaled)
 
 ## Model Development
@@ -44,6 +49,7 @@ To replicate this project locally, follow these steps:
 
   ### Apply K-Means clustering
   kmeans = KMeans(n_clusters=2, random_state=42)
+  
   your_dataframe['Cluster'] = kmeans.fit_predict(X_clustering_scaled)
 
   ![image](https://github.com/Srikanth-343/Predictive-Analysis-on-Healthcare/assets/57741770/fd8d613a-6ba8-47cf-8dfb-8ef8596f609a)
@@ -51,10 +57,10 @@ To replicate this project locally, follow these steps:
   
   ### Create a Random Forest classifier
   rf_classifier = RandomForestClassifier(random_state=42)
-  # Train the model
+  ### Train the model
   rf_classifier.fit(X_train, y_train)
   
-  # Make predictions on the test set
+  ### Make predictions on the test set
   y_pred = rf_classifier.predict(X_test)
 
 
@@ -64,11 +70,15 @@ To replicate this project locally, follow these steps:
 - Conducted sensitivity analysis to evaluate model robustness and generalization.
 - ### Evaluate the model
   accuracy = accuracy_score(y_test, y_pred)
+  
   conf_matrix = confusion_matrix(y_test, y_pred)
+  
   classification_rep = classification_report(y_test, y_pred)
 
   print(f"Accuracy: {accuracy:.2f}")
+  
   print("Confusion Matrix:\n", conf_matrix)
+  
   print("Classification Report:\n", classification_rep)
 
   ![image](https://github.com/Srikanth-343/Predictive-Analysis-on-Healthcare/assets/57741770/57b02c5e-0644-4148-a8dd-5720974cb67d)
@@ -83,6 +93,6 @@ To replicate this project locally, follow these steps:
 - Advanced Clustering Techniques: Investigate refined bunching techniques past K-Means to uncover more multifaceted examples inside the dataset.
 
 ## Conclusion
-- This task effectively explored the domains of prescient investigation and machine learning to resolve the basic issue of liver illness forecast. Utilizing calculated relapse, Irregular Woods characterization, and K-Means clustering, different aspects of information investigation were investigated. The calculated relapse model showed moderate precision, succeeding in distinguishing patients with liver illness however confronting difficulties with misleading negatives. Irregular Woodland exhibited heartiness, giving nuanced experiences. K-Means clustering outwardly divulged likely examples inside mathematical elements. In spite of triumphs, continuous difficulties incorporate further developing grouping balance and diving further into highlight significance. This task highlights the complicated exchange between information, models, and true critical thinking, giving an establishment to additional investigation and refinement in medical care prescient examination.
+- This task effectively explored the domains of prescient investigation and machine learning to resolve the basic issue of liver illness forecast. Utilizing calculated relapse, Irregular Woods characterization, and K-Means clustering, different aspects of information investigation were investigated. The calculated relapse model showed moderate precision, succeeding in distinguishing patients with liver illness however confronting difficulties with misleading negatives. This task highlights the complicated exchange between information, models, and true critical thinking, giving an establishment to additional investigation and refinement in medical care prescient examination.
 
 
