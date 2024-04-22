@@ -1,4 +1,3 @@
-# Predictive-Analysis-on-Healthcare
 
 # A Study on Unraveling Business Solutions: a Predictive Analytics Journey
 
